@@ -1,0 +1,1 @@
+[ -e $HOME/.z.sh ] && source $HOME/.z.sh # z.sh for fussy file find

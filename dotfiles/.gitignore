@@ -1,0 +1,38 @@
+ # IDE
+.idea
+.vscode
+
+# Compiled Python files
+*.pyc
+
+# Folder view configuration files
+.DS_Store
+Desktop.ini
+
+# Thumbnail cache files
+._*
+Thumbs.db
+
+# Files that might appear on external disks
+.Spotlight-V100
+.Trashes
+
+# Files that contain credentials or personal info
+.extra
+.boto
+.mrjob.conf
+.s3cfg
+.aws/
+
+node_modules/
+build
+*.tgz
+lerna-debug.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.changelog
+.ignore
+graphql.config.json
+graphql.schema.json
+.tags*
