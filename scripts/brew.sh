@@ -83,10 +83,13 @@ brew cask install font-firacode-nerd-font-mono
 
 # VIM
 brew install vim --override-system-vi \
+  && cp -r dotfiles/.vim ~/.vim \
   && [ ! -d ~/.vim/bundle/Vundle.vim ] \
   && git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/Vundle.vim \
   && vim -c "PluginInstall" \
   && ~/.vim/bundle/YouCompleteMe/install.py
+
+brew install tmux
 
 # Install other useful binaries.
 brew install the_silver_searcher
