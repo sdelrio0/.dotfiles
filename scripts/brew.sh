@@ -86,7 +86,7 @@ brew install vim --override-system-vi \
   && cp -r dotfiles/.vim ~/.vim \
   && [ ! -d ~/.vim/bundle/Vundle.vim ] \
   && git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/Vundle.vim \
-  && vim -c "PluginInstall" \
+  && vim +PluginInstall +qall \
   && ~/.vim/bundle/YouCompleteMe/install.py
 
 brew install tmux
