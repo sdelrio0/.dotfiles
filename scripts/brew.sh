@@ -33,7 +33,7 @@ brew tap dbcli/tap
 brew install coreutils
 sudo ln -s /usr/local/bin/gsha256sum /usr/local/bin/sha256sum
 LINE='export PATH="$PATH:$(brew --prefix coreutils)/libexec/gnubin"'
-grep -q "$LINE" ~/.extra || echo "$LINE" >> ~/.extra
+grep -q "$LINE" ~/.init || echo "$LINE" >> ~/.init
 
 # Install some other useful utilities like `sponge`.
 brew install moreutils
@@ -63,7 +63,7 @@ brew install python3
 brew install ruby-build
 brew install rbenv
 LINE='eval "$(rbenv init -)"'
-grep -q "$LINE" ~/.extra || echo "$LINE" >> ~/.extra
+grep -q "$LINE" ~/.init || echo "$LINE" >> ~/.init
 
 # Install nvm and node
 brew install nvm
@@ -72,8 +72,8 @@ nvm install node
 nvm install --lts
 nvm use node
 nvm run node --version
-LINE='export NVM_DIR="$HOME/.nvm" && source "$(brew --prefix nvm)/nvm.sh"'
-grep -q "$LINE" ~/.extra || echo "$LINE" >> ~/.extra
+LINE='export NVM_DIR="$HOME/.nvm" && source "$(brew --prefix nvm)/nvm.sh && nvm use"'
+grep -q "$LINE" ~/.init || echo "$LINE" >> ~/.init
 
 # Install Java
 brew cask install --appdir="/Applications" java
@@ -115,6 +115,12 @@ brew install cmake
 brew install pgcli
 brew install hexcurse # hex editor
 brew install openssl
+
+# z for fuzzy find
+brew install z
+LINE='. /usr/local/etc/profile.d/z.sh'
+grep -q "$LINE" ~/.init || echo "$LINE" >> ~/.init
+
 
 # Install font tools.
 # brew tap bramstein/webfonttools
@@ -192,6 +198,7 @@ brew cask install --appdir="/Applications" evernote
 brew cask install --appdir="/Applications" 1password
 #brew cask install --appdir="/Applications" gimp
 #brew cask install --appdir="/Applications" inkscape
+brew cask install --appdir="/Applications" spotify
 
 #Remove comment to install LaTeX distribution MacTeX
 #brew cask install --appdir="/Applications" mactex
@@ -214,6 +221,7 @@ brew cask install --appdir="/Applications" synergy
 brew cask install --appdir="/Applications" telegram
 brew cask install --appdir="/Applications" vagrant
 brew cask install --appdir="/Applications" virtualbox
+brew cask install --appdir="/Applications" jitouch
 
  # Install Docker, which requires virtualbox
 brew install docker

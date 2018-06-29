@@ -74,7 +74,7 @@ export LANGUAGE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 # Use vi mode
-set -o vi
+# set -o vi
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -99,4 +99,4 @@ DOTFILES=$HOME/.dotfiles
 [ -f $DOTFILES/sources/alias.sh ] && source $DOTFILES/sources/alias.sh # Aliases
 [ -f $DOTFILES/sources/functions.sh ] && source $DOTFILES/sources/functions.sh # Functions
 [ -f $DOTFILES/sources/inits.sh ] && source $DOTFILES/sources/inits.sh # Runtime / app initializations
-[ -f $HOME/.extra ] && source $HOME/.extra # Runtime / app initializations
+[ -f $HOME/.init ] && source $HOME/.init # Runtime / app initializations

@@ -18,7 +18,7 @@ tool = vimdiff
 log = true
 
 [init]
-templatedir = ~/.git_template
+# templatedir = ~/.git_template
 
 [push]
 default = current
