@@ -18,11 +18,13 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   (sh scripts/osxprep.sh) 2>&1 | tee -a osxprep.$TIMESTAMP.log
 fi;
 
+# Install brew and brew packages
 read -p "Run brew.sh? (y/n) " -n 1; echo "";
 if [[ $REPLY =~ ^[Yy]$ ]]; then
   (sh scripts/brew.sh) 2>&1 | tee -a brew.$TIMESTAMP.log
 fi;
 
+# Install datastores
 read -p "Run datastores.sh? (y/n) " -n 1; echo "";
 if [[ $REPLY =~ ^[Yy]$ ]]; then
   (sh scripts/datastores.sh) 2>&1 | tee -a datastores.$TIMESTAMP.log
