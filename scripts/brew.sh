@@ -83,7 +83,6 @@ brew cask install font-firacode-nerd-font-mono
 
 # VIM
 brew install vim --override-system-vi \
-  && cp -r dotfiles/.vim ~/.vim \
   && [ ! -d ~/.vim/bundle/Vundle.vim ] \
   && git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/Vundle.vim \
   && vim +PluginInstall +qall \
@@ -222,6 +221,8 @@ brew cask install --appdir="/Applications" telegram
 brew cask install --appdir="/Applications" vagrant
 brew cask install --appdir="/Applications" virtualbox
 brew cask install --appdir="/Applications" jitouch
+
+brew cask install --appdir="/Applications" steam
 
  # Install Docker, which requires virtualbox
 brew install docker

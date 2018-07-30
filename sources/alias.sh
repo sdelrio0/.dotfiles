@@ -54,9 +54,9 @@ alias pip="pip3"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
-  colorflag="-G"
-else # OS X `ls`
   colorflag="--color"
+else # OS X `ls`
+  colorflag="-G"
 fi
 
 # List all files colorized in long format

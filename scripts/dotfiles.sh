@@ -4,11 +4,9 @@ for source_path in $PWD/dotfiles/.*; do
   source_filename=${source_path##*/}
   target_path="$HOME/${source_filename}"
 
-  [ -d $source_path ] && continue;
-
   # Backup existing dotfiles
-  if [ -f $target_path ]; then
-    echo "Backing up '$source_filename'in $HOME/.dotfiles.bak/"
+  if [ -e $target_path ]; then
+    echo "Backing up '$source_filename' in $HOME/.dotfiles.bak/"
     mkdir -p $HOME/.dotfiles.bak
     mv $target_path "$HOME/.dotfiles.bak/$source_filename.$(date "+%Y%m%d%H%M%S")"
   fi;

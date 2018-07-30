@@ -6,13 +6,15 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
+" Color schemes
+Bundle 'sickill/vim-monokai'
+
 " UI / Theme
 Bundle 'scrooloose/nerdtree'
 
 Bundle 'ryanoasis/vim-devicons'
 Bundle 'vim-airline/vim-airline'
 Bundle 'vim-airline/vim-airline-themes'
-Bundle 'sickill/vim-monokai'
 Bundle 'edkolev/tmuxline.vim'
 
 " Fuzzy Finder
