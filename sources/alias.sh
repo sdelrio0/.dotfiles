@@ -37,6 +37,7 @@ alias cz="vim ~/.dotfiles/dotfiles/.zshrc"
 alias ca="vim ~/.dotfiles/sources/alias.sh"
 alias cf="vim ~/.dotfiles/sources/functions.sh"
 alias cb="vim ~/.dotfiles/scripts/brew.sh"
+alias cv="vim ~/.dotfiles/dotfiles/.vimrc"
 alias dot="cd ~/.dotfiles"
 # alias reload="source ~/.zshrc"
 
@@ -49,8 +50,8 @@ alias github="open -a Google\ Chrome 'https://github.com/sdelrio0'"
 alias rabbit-local="open -a Google\ Chrome 'http://localhost:15672'"
 
 # Python
-alias python="python3"
-alias pip="pip3"
+# alias python="python3"
+# alias pip="pip3"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -138,3 +139,11 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
+
+#######################
+# Load custom aliases
+#######################
+
+if [ -d "$HOME/.dotfiles/custom" ]; then
+  source "$HOME/.dotfiles/custom/alias.custom.sh"
+fi

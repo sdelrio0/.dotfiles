@@ -51,6 +51,10 @@ Bundle 'janko-m/vim-test'
 " Markdown
 Bundle 'godlygeek/tabular'
 Bundle 'plasticboy/vim-markdown'
+
+" Hacklang
+Bundle 'hhvm/vim-hack'
+
 " Bundle 'L9'
 " Bundle 'majutsushi/tagbar'
 
