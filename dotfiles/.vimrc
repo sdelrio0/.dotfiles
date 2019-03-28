@@ -36,6 +36,9 @@ set completefunc=syntaxcomplete#Complete " specifies a function to be used for I
 set ruler " show line and column numbers in the status bar
 set lazyredraw " using relativenumbers/cursorline makes vim pagination (j/k) extremely slow. This helps a little bit.
 
+" entering normal mode timeout
+set timeoutlen=1000 ttimeoutlen=0
+
 " Store temporary files in a central spot
 set backup
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
@@ -67,7 +70,7 @@ autocmd FileType xml setlocal equalprg=xmllint\ --format\ -
 
 " spell check markdown files
 autocmd FileType markdown,gitcommit set textwidth=80
-setlocal spell
+setlocal nospell
 
 let &colorcolumn="100,".join(range(120,999),",")
 

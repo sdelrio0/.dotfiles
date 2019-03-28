@@ -11,6 +11,9 @@ export ZSH=$HOME/.oh-my-zsh
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 
+# 10ms for key sequences
+KEYTIMEOUT=1
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -54,6 +57,12 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
+
+# PROMPT='${ret_status}%{$fg_bold[green]%}%p %{$fg[cyan]%}%c %{$fg_bold[blue]%}$(git_prompt_info)$(hg_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}'
+# ZSH_THEME_HG_PROMPT_PREFIX="%{$fg_bold[magenta]%}hg:(%{$fg[red]%}"
+# ZSH_THEME_HG_PROMPT_SUFFIX="%{$reset_color%}"
+# ZSH_THEME_HG_PROMPT_DIRTY="%{$fg[magenta]%}) %{$fg[yellow]%}✗%{$reset_color%}"
+# ZSH_THEME_HG_PROMPT_CLEAN="%{$fg[magenta]%})"
 
 source $ZSH/oh-my-zsh.sh
 
@@ -100,3 +109,9 @@ DOTFILES=$HOME/.dotfiles
 [ -f $DOTFILES/sources/functions.sh ] && source $DOTFILES/sources/functions.sh # Functions
 [ -f $DOTFILES/sources/inits.sh ] && source $DOTFILES/sources/inits.sh # Runtime / app initializations
 [ -f $HOME/.init ] && source $HOME/.init # Runtime / app initializations
+
+# Custom ENV
+export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
+export BYOBU_PREFIX=/usr/local
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
