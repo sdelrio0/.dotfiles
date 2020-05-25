@@ -237,7 +237,7 @@ set splitbelow
 
 
 " Clear the search buffer when hitting return
-nnoremap <CR> :nohlsearch<cr>
+nnoremap <cr> :nohlsearch<cr>
 
 " switch between last two files
 nnoremap <leader><leader> <c-^>

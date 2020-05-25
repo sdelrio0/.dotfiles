@@ -18,9 +18,9 @@ pa() {
 }
 
 # Get current IP
-ip() {
-  ifconfig -a | grep inet | grep broadcast | awk '{ print $2 }'
-}
+# ip() {
+#   ifconfig -a | grep inet | grep broadcast | awk '{ print $2 }'
+# }
 
 # Returns a timestamp in the form 20171019123032 YYYYMMDDhhmmss
 timestamp() {

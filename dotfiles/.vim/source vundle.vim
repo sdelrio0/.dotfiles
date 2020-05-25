@@ -188,8 +188,7 @@ endif
 "  YCM autocompleter
 nmap <C-]> :YcmCompleter GoTo<CR>
 imap <C-]> <ESC>:YcmCompleter GoTo<CR>
-" '/Users/sergiodelrio/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src'
-" let g:ycm_rust_src_path = "$(rustc --print sysroot)/lib/rustlib/src/rust/src"
+let g:ycm_rust_src_path = '/Users/sergiodelrio/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src'
 
 "  Auto format on save
 let g:rustfmt_autosave = 1

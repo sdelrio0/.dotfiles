@@ -65,6 +65,7 @@ plugins=(git)
 # ZSH_THEME_HG_PROMPT_CLEAN="%{$fg[magenta]%})"
 
 source $ZSH/oh-my-zsh.sh
+source $HOME/.bash_profile
 
 #########################################################
 # User configuration
@@ -83,7 +84,7 @@ export LANGUAGE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 # Use vi mode
-# set -o vi
+set -o vi
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -115,3 +116,6 @@ export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 export BYOBU_PREFIX=/usr/local
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+# Rustup
+export PATH="$HOME/.cargo/bin:$PATH"

@@ -88,8 +88,6 @@ brew install vim --override-system-vi \
   && vim +PluginInstall +qall \
   && ~/.vim/bundle/YouCompleteMe/install.py
 
-brew install tmux
-
 # Install other useful binaries.
 brew install the_silver_searcher
 brew install ack
